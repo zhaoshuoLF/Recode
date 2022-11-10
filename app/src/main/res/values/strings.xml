@@ -11,5 +11,16 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emma_rivera">Record</string>
     <string name="login">Sign in</string>
+    <string name="all">All</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="missed">Missed</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="you_have_an">You have an appointment now</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="darna_janet">Kim Torres</string>
+    <string name="makati_medi">Makati Medical Center</string>
+    <string name="sep_19_2020">Feb 10, 2021 10:00 am</string>
 </resources>

@@ -6,4 +6,62 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="emma_rivera">
+
+        <item name="android:textSize">
+            25sp
+        </item>
+
+        <item name="android:textColor">
+            #111111
+        </item>
+
+    </style>
+
+    <style name="you_have_an">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #111111
+        </item>
+
+    </style>
+    <style name="upcoming">
+
+        <item name="android:textSize">
+            10sp
+        </item>
+
+        <item name="android:textColor">
+            #43C8FF
+        </item>
+
+    </style>
+    <style name="darna_janet">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #111111
+        </item>
+
+    </style>
+
+    <style name="makati_medi">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #5E6D7D
+        </item>
+
+    </style>
+
 </resources>
