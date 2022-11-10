@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_backcolor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/record_head_margin_top"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emma_rivera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/emma_rivera"
+            android:textAppearance="@style/emma_rivera"
+            app:layout_constraintBaseline_toBottomOf="@id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/service_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/record_head_margin_top"
+            android:layout_marginEnd="@dimen/info_margin_top"
+            android:src="@drawable/ic_serviceface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/status_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:id="@+id/status_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/status_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/status_title"
+            app:layout_constraintTop_toBottomOf="@+id/status_title" />
+
+        <ImageView
+            android:id="@+id/status_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_enter"
+            android:layout_marginEnd="@dimen/info_margin_top"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hospital"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/info_margin_top"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status">
+
+        <ImageView
+            android:id="@+id/hospital_icon"
+            android:layout_width="@dimen/ic_record_size"
+            android:layout_height="@dimen/ic_record_size"
+            android:layout_marginStart="@dimen/ic_record_margin_start"
+            android:layout_marginTop="@dimen/ic_record_margin_top"
+            android:background="@drawable/ic_location1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hospital_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toEndOf="@+id/hospital_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hospital_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/hospital_title"
+            app:layout_constraintTop_toBottomOf="@+id/hospital_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/speciality"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hospital">
+
+        <ImageView
+            android:id="@+id/speciality_icon"
+            android:layout_width="@dimen/ic_record_size"
+            android:layout_height="@dimen/ic_record_size"
+            android:layout_marginStart="@dimen/ic_record_margin_start"
+            android:layout_marginTop="@dimen/ic_record_margin_top"
+            android:background="@drawable/ic_work"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/speciality_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toEndOf="@+id/speciality_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/speciality_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/speciality_title"
+            app:layout_constraintTop_toBottomOf="@+id/speciality_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/doctor"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speciality">
+
+        <ImageView
+            android:id="@+id/doctor_icon"
+            android:layout_width="@dimen/ic_record_size"
+            android:layout_height="@dimen/ic_record_size"
+            android:layout_marginStart="@dimen/ic_record_margin_start"
+            android:layout_marginTop="@dimen/ic_record_margin_top"
+            android:background="@drawable/ic_doctor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctor_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toEndOf="@+id/doctor_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctor_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/doctor_title"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/patient"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/info_margin_top"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctor">
+
+        <ImageView
+            android:id="@+id/patient_icon"
+            android:layout_width="@dimen/ic_record_size"
+            android:layout_height="@dimen/ic_record_size"
+            android:layout_marginStart="@dimen/ic_record_margin_start"
+            android:layout_marginTop="@dimen/ic_record_margin_top"
+            android:background="@drawable/ic_location2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/patient_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toEndOf="@+id/patient_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/patient_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/patient_title"
+            app:layout_constraintTop_toBottomOf="@+id/patient_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient">
+
+        <ImageView
+            android:id="@+id/gender_icon"
+            android:layout_width="@dimen/ic_record_size"
+            android:layout_height="@dimen/ic_record_size"
+            android:layout_marginStart="@dimen/ic_record_margin_start"
+            android:layout_marginTop="@dimen/ic_record_margin_top"
+            android:background="@drawable/ic_gender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gender_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/info_margin_top"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/hospital"
+            app:layout_constraintStart_toEndOf="@+id/gender_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gender_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_margin_top"
+            android:text="@string/hospital"
+            android:textAppearance="@style/makati_medi"
+            app:layout_constraintStart_toStartOf="@id/gender_title"
+            app:layout_constraintTop_toBottomOf="@+id/gender_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

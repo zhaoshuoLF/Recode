@@ -64,4 +64,15 @@
 
     </style>
 
+    <style name="hospital">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #111111
+        </item>
+
+    </style>
 </resources>
