@@ -1,27 +1,45 @@
 package com.zhaoshuo.recode.ui
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.zhaoshuo.recode.logic.Repository
 import com.zhaoshuo.recode.logic.model.RecordResponse
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import javax.net.ssl.SSLEngineResult.Status
 
 class RecodesViewModel : ViewModel() {
-    private val _list = MutableLiveData<RecordResponse.Data>()
-    val list: LiveData<RecordResponse.Data> = _list
+    private val _groupList = MutableLiveData<
+            Map<String?, List<RecordResponse.Item>>>()
+    val groupList: LiveData<
+            Map<String?, List<RecordResponse.Item>>> = _groupList
+
+    private val _cstatus = MutableLiveData<String>("ALL")
 
     private val _isLogined = MutableLiveData<Boolean>(false)
     val isLogined: LiveData<Boolean> = _isLogined
 
+    val recordList = Transformations.switchMap(_cstatus) {
+        MutableLiveData(_groupList.value?.get(it))
+    }
+
+    fun setCStatus(status: String) {
+        _cstatus.value = status
+    }
+
     fun getRecodeList() = viewModelScope.launch {
         async {
             Repository.getRecodeList("100", "-1").onSuccess { data ->
-                _list.value = data
+                data?.let {
+                    val map = data.items?.groupBy { it.status }
+                    val mapT: MutableMap<String?, List<RecordResponse.Item>> = mutableMapOf()
+                    data.items?.let { mapT.put("ALL", it) }
+                    if (map != null) {
+                        mapT.putAll(map)
+                    }
+                    _groupList.value = mapT
+                }
             }.onFailure {
-                _list.value = null
+                _groupList.value = null
             }
         }
     }

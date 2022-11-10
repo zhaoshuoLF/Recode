@@ -32,7 +32,6 @@ class LoginFragment : Fragment() {
         binding.login.setOnClickListener {
             viewModel.login()
         }
-
         viewModel.isLogined.observe(viewLifecycleOwner){
             if(it){
                 findNavController().navigate(R.id.action_loginFragment2_to_blankFragment)
