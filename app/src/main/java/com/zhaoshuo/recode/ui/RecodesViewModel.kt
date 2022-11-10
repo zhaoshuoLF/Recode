@@ -16,7 +16,6 @@ class RecodesViewModel : ViewModel() {
     private val _isLogined = MutableLiveData<Boolean>(false)
     val isLogined: LiveData<Boolean> = _isLogined
 
-
     fun getRecodeList() = viewModelScope.launch {
         async {
             Repository.getRecodeList("100", "-1").onSuccess { data ->

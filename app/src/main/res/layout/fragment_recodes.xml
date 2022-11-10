@@ -27,38 +27,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emma_rivera">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/all" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/upcoming" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/missed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/missed" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/completed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/completed" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/cancelled"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cancelled" />
-
+        app:layout_constraintTop_toBottomOf="@+id/emma_rivera"
+        app:tabMode="scrollable">
 
     </com.google.android.material.tabs.TabLayout>
 
