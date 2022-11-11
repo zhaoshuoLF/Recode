@@ -5,7 +5,6 @@ import com.zhaoshuo.recode.logic.Repository
 import com.zhaoshuo.recode.logic.model.RecordResponse
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import javax.net.ssl.SSLEngineResult.Status
 
 class RecodesViewModel : ViewModel() {
     private val _groupList = MutableLiveData<
@@ -13,17 +12,17 @@ class RecodesViewModel : ViewModel() {
     val groupList: LiveData<
             Map<String?, List<RecordResponse.Item>>> = _groupList
 
-    private val _cstatus = MutableLiveData<String>("ALL")
+    private val _status = MutableLiveData("ALL")
 
-    private val _isLogined = MutableLiveData<Boolean>(false)
-    val isLogined: LiveData<Boolean> = _isLogined
+    private val _isLogin = MutableLiveData<Boolean>(false)
+    val isLogin: LiveData<Boolean> = _isLogin
 
-    val recordList = Transformations.switchMap(_cstatus) {
+    val recordList = Transformations.switchMap(_status) {
         MutableLiveData(_groupList.value?.get(it))
     }
 
     fun setCStatus(status: String) {
-        _cstatus.value = status
+        _status.value = status
     }
 
     fun getRecodeList() = viewModelScope.launch {
@@ -47,7 +46,7 @@ class RecodesViewModel : ViewModel() {
     fun login() = viewModelScope.launch {
         async {
             Repository.loginRecode()
-            _isLogined.value = true
+            _isLogin.value = true
         }
     }
 }

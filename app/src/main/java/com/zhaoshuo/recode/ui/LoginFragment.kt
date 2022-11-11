@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.zhaoshuo.recode.R
 import com.zhaoshuo.recode.databinding.FragmentLoginBinding
@@ -31,7 +28,7 @@ class LoginFragment : Fragment() {
         binding.login.setOnClickListener {
             viewModel.login()
         }
-        viewModel.isLogined.observe(viewLifecycleOwner){
+        viewModel.isLogin.observe(viewLifecycleOwner){
             if(it){
                 findNavController().navigate(R.id.action_loginFragment2_to_blankFragment)
             }

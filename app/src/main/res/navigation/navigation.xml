@@ -28,5 +28,8 @@
         android:name="com.zhaoshuo.recode.ui.RecordInfoFragment"
         android:label="fragment_record_info"
         tools:layout="@layout/fragment_record_info" >
+        <action
+            android:id="@+id/action_recordInfoFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
 </navigation>
