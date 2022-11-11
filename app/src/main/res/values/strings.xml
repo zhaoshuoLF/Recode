@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Recode</string>
-    <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -9,7 +8,6 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="emma_rivera">Record</string>
     <string name="login">Sign in</string>
@@ -24,4 +22,17 @@
     <string name="makati_medi">Makati Medical Center</string>
     <string name="sep_19_2020">Feb 10, 2021 10:00 am</string>
     <string name="hospital">Hospital</string>
+    <string name="status">Status</string>
+    <string name="speciality">Speciality</string>
+    <string name="doctor">Doctor</string>
+    <string name="patient">Patient</string>
+    <string name="gender">Gender</string>
+    <string name="birth">Date of birth</string>
+    <string name="note">Note</string>
+    <string name="payment_method">Payment method</string>
+    <string name="order_id">Order ID</string>
+    <string name="consultation_fee">Consultation fee:</string>
+    <string name="platform_fee">Platform fee:</string>
+    <string name="vat">VAT 12% (inclusive):</string>
+    <string name="total_price">Total price:</string>
 </resources>

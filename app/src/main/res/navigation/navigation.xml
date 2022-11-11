@@ -12,17 +12,21 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment2_to_blankFragment"
-            app:destination="@id/blankFragment" />
+            app:destination="@id/RecodesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/blankFragment"
+        android:id="@+id/RecodesFragment"
         android:name="com.zhaoshuo.recode.ui.RecodesFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_recodes">
-      <argument
-          android:name="transaction"
-          android:defaultValue="@null"
-          app:argType="com.zhaoshuo.recode.logic.model.RecordResponse"
-          app:nullable="true"/>
+        <action
+            android:id="@+id/action_blankFragment_to_recordInfoFragment"
+            app:destination="@id/recordInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordInfoFragment"
+        android:name="com.zhaoshuo.recode.ui.RecordInfoFragment"
+        android:label="fragment_record_info"
+        tools:layout="@layout/fragment_record_info" >
     </fragment>
 </navigation>

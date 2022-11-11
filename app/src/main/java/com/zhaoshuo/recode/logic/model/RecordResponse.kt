@@ -6,7 +6,7 @@ data class RecordResponse(
     @SerializedName("c") val code: String?,
     @SerializedName("m") val message: String?,
     @SerializedName("d") val data: Data?
-):java.io.Serializable {
+) : java.io.Serializable {
 
     data class Data(
         @SerializedName("Count") val count: String?,
@@ -18,8 +18,8 @@ data class RecordResponse(
         val patient: Patient?,
         val payment: Payment?,
         val practitioner: Practitioner?,
-        val start:String?
-    )
+        val start: String?
+    ) : java.io.Serializable
 
     data class Patient(
         val fullName: String?,

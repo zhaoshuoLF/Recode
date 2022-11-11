@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
@@ -18,7 +19,14 @@ class RecodesFragment : Fragment() {
     private lateinit var list: RecyclerView
 
     private val viewModel: RecodesViewModel by viewModels()
-    private var adapter: RecordAdapter = RecordAdapter(this)
+    private var adapter: RecordAdapter = RecordAdapter { item -> adapterOnClick(item) }
+
+    private fun adapterOnClick(item: RecordResponse.Item) {
+        val bundle = Bundle()
+        bundle.putSerializable("item", item)
+        findNavController().navigate(R.id.action_blankFragment_to_recordInfoFragment, bundle)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,7 +60,7 @@ class RecodesFragment : Fragment() {
         list = view.findViewById<RecyclerView>(R.id.recodeList)
     }
 
-    fun initTabLayout(items: Map<String?, List<RecordResponse.Item>>) {
+    private fun initTabLayout(items: Map<String?, List<RecordResponse.Item>>) {
         for (key in items.keys) {
             tabLayout.addTab(tabLayout.newTab().setText(key))
         }
@@ -69,9 +77,5 @@ class RecodesFragment : Fragment() {
             }
         })
 
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }
