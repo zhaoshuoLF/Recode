@@ -17,7 +17,6 @@ import com.zhaoshuo.recode.databinding.FragmentLoginBinding
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: RecodesViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

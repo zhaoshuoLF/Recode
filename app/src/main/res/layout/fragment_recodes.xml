@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/ic_record_margin_top"
         android:gravity="center_horizontal|top"
         android:text="@string/emma_rivera"
         android:textAppearance="@style/emma_rivera"
@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/login_backcolor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
