@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/info_margin_top"
             android:text="@string/hospital"
-            android:textAppearance="@style/makati_medi"
+            android:textAppearance="@style/happening_n"
             app:layout_constraintStart_toStartOf="@id/status_title"
             app:layout_constraintTop_toBottomOf="@+id/status_title" />
 

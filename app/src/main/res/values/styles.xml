@@ -75,4 +75,16 @@
         </item>
 
     </style>
+
+    <style name="happening_n">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #43C8FF
+        </item>
+
+    </style>
 </resources>

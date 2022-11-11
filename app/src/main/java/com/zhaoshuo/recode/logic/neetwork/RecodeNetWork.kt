@@ -22,17 +22,12 @@ object RecodeNetWork {
         pageSize: String,
         pageIndex: String
     ): RecordResponse {
-//        val headers = hashMapOf<String, String>(
-//            "Content-Type" to "application/json",
-//            "Authorization" to "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoVHlwZSI6InVzZXJzIiwiZW1haWwiOiI5OTYyNjcwNzdAcXEuY29tIiwiaWQiOiJiOWFjNzZiYy0wMjBjLTQyOWUtOTVmZi02MGU2NmE4NzZlZjAiLCJrZXlfaWQiOiI3OTkwYzBhNjM1ODg0ODMyOTgwMzc4ZWZlNzkzZTQxZSIsImVwb2NoIjoxNjY3OTc1NjMyLCJwYXJ0bmVyX25hbWUiOiJhbmRyb2lkLWFwcCIsInR5cGUiOjAsImlhdCI6MTY2Nzk3NTAzMiwiZXhwIjoxNjczMTU5MDMyfQ.IVXGn39wtYbQiiH0r7c5mZmj9bAsnMLZ89FvsIW8u3g"
-//        )
         val token = AuthorizationDao.getSaveAuthorization() ?: ""
         val headers = hashMapOf<String, String>(
             "Content-Type" to "application/json",
             "Authorization" to token
         )
-       val recordResponse:  RecordResponse=recodeService.getRecodeList(headers, pageSize, pageIndex)
-        return recordResponse
+        return recodeService.getRecodeList(headers, pageSize, pageIndex)
     }
 
     private suspend fun <T : Any> Call<T>.await(): T {

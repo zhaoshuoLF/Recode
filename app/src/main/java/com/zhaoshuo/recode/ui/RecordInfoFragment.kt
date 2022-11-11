@@ -1,11 +1,14 @@
 package com.zhaoshuo.recode.ui
 
+import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.zhaoshuo.recode.R
 import com.zhaoshuo.recode.logic.model.RecordResponse
 
@@ -16,6 +19,7 @@ class RecordInfoFragment : Fragment() {
     private lateinit var doctorInfo: TextView
     private lateinit var patientInfo: TextView
     private lateinit var genderInfo: TextView
+    private lateinit var back:ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +39,9 @@ class RecordInfoFragment : Fragment() {
         doctorInfo.text = item.practitioner?.name ?: ""
         patientInfo.text = item.patient?.fullName ?: ""
         genderInfo.text = item.patient?.gender ?: ""
+        back.setOnClickListener{
+            findNavController().popBackStack()
+        }
     }
 
     private fun init(view: View) {
@@ -44,5 +51,6 @@ class RecordInfoFragment : Fragment() {
         doctorInfo = view.findViewById(R.id.doctor_info)
         patientInfo = view.findViewById(R.id.patient_info)
         genderInfo = view.findViewById(R.id.gender_info)
+        back=view.findViewById(R.id.back)
     }
 }

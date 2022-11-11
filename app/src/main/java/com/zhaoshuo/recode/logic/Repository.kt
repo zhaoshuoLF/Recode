@@ -1,10 +1,8 @@
 package com.zhaoshuo.recode.logic
 
-import androidx.lifecycle.liveData
 import com.zhaoshuo.recode.logic.model.LoginRequest
 import com.zhaoshuo.recode.logic.model.RecordResponse
 import com.zhaoshuo.recode.logic.neetwork.RecodeNetWork
-import kotlin.coroutines.CoroutineContext
 
 object Repository {
 
@@ -35,14 +33,4 @@ object Repository {
 
         return result
     }
-
-    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) =
-        liveData<Result<T>>(context) {
-            val result = try {
-                block()
-            } catch (e: Exception) {
-                Result.failure<T>(e)
-            }
-            emit(result)
-        }
 }
